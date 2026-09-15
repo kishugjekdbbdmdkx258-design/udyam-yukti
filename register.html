@@ -4,115 +4,332 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Udyam Yukti - Create Account</title>
+
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
     <div class="login-page">
+
         <div class="login-card">
 
+            <!-- Logo -->
             <div class="logo-icon">
                 <img src="logo.png" alt="Udyam Yukti Logo">
             </div>
+
+            <!-- Subtitle -->
             <p class="subtitle">
                 ग्रामीण उद्यमियों का स्मार्ट साथी
             </p>
 
-            <h2>खाता बनाएं</h2>
+            <!-- Heading -->
+            <h2>
+                खाता बनाएं / Create Account
+            </h2>
 
             <p class="login-text">
                 अपनी जानकारी भरें ताकि हम आपके लिए सही सलाह दे सकें।
             </p>
 
+
+            <!-- Registration Form -->
             <form onsubmit="registerUser(event)">
 
-                <label for="fullName">पूरा नाम / Full Name</label>
-                <input type="text" id="fullName" placeholder="अपना नाम लिखें" required />
+                <!-- Full Name -->
+                <label for="fullName">
+                    पूरा नाम / Full Name
+                </label>
 
-                <label for="age">उम्र / Age</label>
-                <input type="number" id="age" placeholder="अपनी उम्र लिखें" min="18" max="100" required />
-                <label for="state">राज्य चुनें / Select Stae</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="अपना नाम लिखें / Enter your name"
+                    required
+                />
+
+
+                <!-- Age -->
+                <label for="age">
+                    उम्र / Age
+                </label>
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="अपनी उम्र लिखें / Enter your age"
+                    min="18"
+                    max="100"
+                    required
+                />
+
+
+                <!-- State -->
+                <label for="state">
+                    राज्य / State
+                </label>
 
                 <select id="state" required>
-                    <option value="">अपना राज्य चुनें</option>
 
-                    <option value="Andhra Pradesh">आंध्र प्रदेश</option>
-                    <option value="Arunachal Pradesh">अरुणाचल प्रदेश</option>
-                    <option value="Assam">असम</option>
-                    <option value="Bihar">बिहार</option>
-                    <option value="Chhattisgarh">छत्तीसगढ़</option>
-                    <option value="Goa">गोवा</option>
-                    <option value="Gujarat">गुजरात</option>
-                    <option value="Haryana">हरियाणा</option>
-                    <option value="Himachal Pradesh">हिमाचल प्रदेश</option>
-                    <option value="Jharkhand">झारखंड</option>
-                    <option value="Karnataka">कर्नाटक</option>
-                    <option value="Kerala">केरल</option>
-                    <option value="Madhya Pradesh">मध्य प्रदेश</option>
-                    <option value="Maharashtra">महाराष्ट्र</option>
-                    <option value="Manipur">मणिपुर</option>
-                    <option value="Meghalaya">मेघालय</option>
-                    <option value="Mizoram">मिजोरम</option>
-                    <option value="Nagaland">नागालैंड</option>
-                    <option value="Odisha">ओडिशा</option>
-                    <option value="Punjab">पंजाब</option>
-                    <option value="Rajasthan">राजस्थान</option>
-                    <option value="Sikkim">सिक्किम</option>
-                    <option value="Tamil Nadu">तमिलनाडु</option>
-                    <option value="Telangana">तेलंगाना</option>
-                    <option value="Tripura">त्रिपुरा</option>
-                    <option value="Uttar Pradesh">उत्तर प्रदेश</option>
-                    <option value="Uttarakhand">उत्तराखंड</option>
-                    <option value="West Bengal">पश्चिम बंगाल</option>
+                    <option value="">
+                        अपना राज्य चुनें / Select State
+                    </option>
+
+                    <option value="Andhra Pradesh">
+                        आंध्र प्रदेश / Andhra Pradesh
+                    </option>
+
+                    <option value="Arunachal Pradesh">
+                        अरुणाचल प्रदेश / Arunachal Pradesh
+                    </option>
+
+                    <option value="Assam">
+                        असम / Assam
+                    </option>
+
+                    <option value="Bihar">
+                        बिहार / Bihar
+                    </option>
+
+                    <option value="Chhattisgarh">
+                        छत्तीसगढ़ / Chhattisgarh
+                    </option>
+
+                    <option value="Goa">
+                        गोवा / Goa
+                    </option>
+
+                    <option value="Gujarat">
+                        गुजरात / Gujarat
+                    </option>
+
+                    <option value="Haryana">
+                        हरियाणा / Haryana
+                    </option>
+
+                    <option value="Himachal Pradesh">
+                        हिमाचल प्रदेश / Himachal Pradesh
+                    </option>
+
+                    <option value="Jharkhand">
+                        झारखंड / Jharkhand
+                    </option>
+
+                    <option value="Karnataka">
+                        कर्नाटक / Karnataka
+                    </option>
+
+                    <option value="Kerala">
+                        केरल / Kerala
+                    </option>
+
+                    <option value="Madhya Pradesh">
+                        मध्य प्रदेश / Madhya Pradesh
+                    </option>
+
+                    <option value="Maharashtra">
+                        महाराष्ट्र / Maharashtra
+                    </option>
+
+                    <option value="Manipur">
+                        मणिपुर / Manipur
+                    </option>
+
+                    <option value="Meghalaya">
+                        मेघालय / Meghalaya
+                    </option>
+
+                    <option value="Mizoram">
+                        मिजोरम / Mizoram
+                    </option>
+
+                    <option value="Nagaland">
+                        नागालैंड / Nagaland
+                    </option>
+
+                    <option value="Odisha">
+                        ओडिशा / Odisha
+                    </option>
+
+                    <option value="Punjab">
+                        पंजाब / Punjab
+                    </option>
+
+                    <option value="Rajasthan">
+                        राजस्थान / Rajasthan
+                    </option>
+
+                    <option value="Sikkim">
+                        सिक्किम / Sikkim
+                    </option>
+
+                    <option value="Tamil Nadu">
+                        तमिलनाडु / Tamil Nadu
+                    </option>
+
+                    <option value="Telangana">
+                        तेलंगाना / Telangana
+                    </option>
+
+                    <option value="Tripura">
+                        त्रिपुरा / Tripura
+                    </option>
+
+                    <option value="Uttar Pradesh">
+                        उत्तर प्रदेश / Uttar Pradesh
+                    </option>
+
+                    <option value="Uttarakhand">
+                        उत्तराखंड / Uttarakhand
+                    </option>
+
+                    <option value="West Bengal">
+                        पश्चिम बंगाल / West Bengal
+                    </option>
+
                 </select>
 
-                <label for="district">जिला / District</label>
 
-<select id="district" required disabled>
-    <option value="">
-        पहले राज्य चुनें / Select State First
-    </option>
-</select>
-                <label for="village">गाँव / शहर / Village</label>
-                <input type="text" id="village" placeholder="अपने गाँव या शहर का नाम" required />
+                <!-- District -->
+                <label for="district">
+                    जिला / District
+                </label>
 
-                <label for="business">आप कौन-सा व्यवसाय करते हैं / या करना चाहते हैं ?</label>
+                <select id="district" required disabled>
+
+                    <option value="">
+                        पहले राज्य चुनें / Select State First
+                    </option>
+
+                </select>
+
+
+                <!-- Village / City -->
+                <label for="village">
+                    गाँव / शहर / Village / City
+                </label>
+
+                <input
+                    type="text"
+                    id="village"
+                    placeholder="अपने गाँव या शहर का नाम"
+                    required
+                />
+
+
+                <!-- Business -->
+                <label for="business">
+                    आप कौन-सा व्यवसाय करते हैं / या करना चाहते हैं?
+                </label>
+
                 <select id="business" required>
-                    <option value="">व्यवसाय चुनें / Select Business</option>
-                    <option>किराना दुकान / Grocery shop</option>
-                    <option>सिलाई / Tailoring</option>
-                    <option>खाने-पीने का व्यवसाय / hotel</option>
-                    <option>कृषि / Agriculture</option>
-                    <option>हस्तशिल्प / Handicraft</option>
-                    <option>मोबाइल रिपेयर / Phone repairing</option>
-                    <option>पशुपालन / Dairy</option>
-                    <option>अभी व्यवसाय शुरू नहीं किया / Haven't started the business yet.</option>
-                    <option>अन्य / Any other</option>
+
+                    <option value="">
+                        व्यवसाय चुनें / Select Business
+                    </option>
+
+                    <option value="किराना दुकान / Grocery Shop">
+                        किराना दुकान / Grocery Shop
+                    </option>
+
+                    <option value="सिलाई / Tailoring">
+                        सिलाई / Tailoring
+                    </option>
+
+                    <option value="खाने-पीने का व्यवसाय / Food Business">
+                        खाने-पीने का व्यवसाय / Food Business
+                    </option>
+
+                    <option value="कृषि / Agriculture">
+                        कृषि / Agriculture
+                    </option>
+
+                    <option value="हस्तशिल्प / Handicraft">
+                        हस्तशिल्प / Handicraft
+                    </option>
+
+                    <option value="मोबाइल रिपेयर / Mobile Repair">
+                        मोबाइल रिपेयर / Mobile Repair
+                    </option>
+
+                    <option value="पशुपालन / Dairy">
+                        पशुपालन / Dairy
+                    </option>
+
+                    <option value="अभी व्यवसाय शुरू नहीं किया / Not Started">
+                        अभी व्यवसाय शुरू नहीं किया / Haven't Started
+                    </option>
+
+                    <option value="अन्य / Other">
+                        अन्य / Other
+                    </option>
+
                 </select>
 
-                <label for="registerMobile">मोबाइल नंबर / Mobile no.</label>
-                <input type="tel" id="registerMobile" placeholder="10 अंकों का मोबाइल नंबर" maxlength="10" required />
 
-                <label for="registerPassword">पासवर्ड बनाएं / Create Password</label>
-                <input type="password" id="registerPassword" placeholder="कम से कम 4 अक्षर" required />
+                <!-- Mobile Number -->
+                <label for="registerMobile">
+                    मोबाइल नंबर / Mobile Number
+                </label>
 
-                <button type="submit">खाता बनाएं / Create Account</button>
+                <input
+                    type="tel"
+                    id="registerMobile"
+                    placeholder="10 अंकों का मोबाइल नंबर"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    required
+                />
+
+
+                <!-- Password -->
+                <label for="registerPassword">
+                    पासवर्ड बनाएं / Create Password
+                </label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="कम से कम 4 अक्षर"
+                    minlength="4"
+                    required
+                />
+
+
+                <!-- Submit Button -->
+                <button type="submit">
+                    खाता बनाएं / Create Account
+                </button>
 
             </form>
 
+
+            <!-- Registration Message -->
             <p id="registerMessage"></p>
 
+
+            <!-- Login Link -->
             <p class="signup-text">
+
                 पहले से खाता है?
-                <a href="index.html">लॉगिन करें</a>
+
+                <a href="index.html">
+                    लॉगिन करें / Login
+                </a>
+
             </p>
 
         </div>
+
     </div>
 
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 
 </html>
