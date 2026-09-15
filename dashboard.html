@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udyam Yukti - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="brand-area">
+
+            <img src="dlogo.png" alt="Udyam Yukti Logo" class="brand-logo">
+
+            <div class="brand-text">
+                <h2>Udyam Yukti</h2>
+                <p>Aapke business ka smart saathi</p>
+            </div>
+
+        </div>
+
+        <button class="logout-btn" onclick="logoutUser()">
+            Logout
+        </button>
+
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-card">
+            <h1 id="welcomeName">Namaste, Udyami Ji! 🙏</h1>
+
+            <p id="userLocation">
+                Aapke business ko grow karne ke liye neeche se koi option choose karein.
+            </p>
+
+            <svg class="welcome-pots" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                focusable="false">
+                <defs>
+                    <linearGradient id="potGradBack" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#e08a4f" />
+                        <stop offset="100%" stop-color="#a8532a" />
+                    </linearGradient>
+                    <linearGradient id="potGradFront" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#f0a05f" />
+                        <stop offset="100%" stop-color="#c2703d" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Back pot -->
+                <ellipse cx="72" cy="182" rx="26" ry="7" fill="#7a3c1d" opacity="0.35" />
+                <path d="M45 95 Q45 80 72 80 Q99 80 99 95 L104 150 Q104 178 72 178 Q40 178 40 150 Z"
+                    fill="url(#potGradBack)" />
+                <rect x="60" y="60" width="24" height="26" rx="4" fill="url(#potGradBack)" />
+                <ellipse cx="72" cy="60" rx="16" ry="6" fill="#8b4020" />
+                <path d="M50 120 Q72 128 94 120" stroke="#f5deb3" stroke-width="2" fill="none" opacity="0.55" />
+
+                <!-- Front pot -->
+                <ellipse cx="132" cy="192" rx="22" ry="6" fill="#7a3c1d" opacity="0.35" />
+                <path d="M110 130 Q110 117 132 117 Q154 117 154 130 L158 175 Q158 198 132 198 Q106 198 106 175 Z"
+                    fill="url(#potGradFront)" />
+                <rect x="122" y="100" width="20" height="22" rx="4" fill="url(#potGradFront)" />
+                <ellipse cx="132" cy="100" rx="13" ry="5" fill="#96502a" />
+                <path d="M114 155 Q132 162 150 155" stroke="#f5deb3" stroke-width="2" fill="none" opacity="0.55" />
+            </svg>
+        </section>
+
+        <h2 class="section-title">आपको किस चीज में मदद चाहिए?</h2>
+
+        <section class="feature-grid">
+
+            <!-- AI Business Advice Card -->
+            <div class="feature-card" onclick="openAIChat()">
+
+                <div class="feature-image ai-image"></div>
+
+                <h3>व्यापार से जुड़ी सलाह / AI Business Advice</h3>
+
+                <p>
+                    अपने व्यवसाय को आगे बढ़ाने के लिए सरल और उपयोगी सलाह पाएं।
+                </p>
+
+                <button type="button" onclick="event.stopPropagation(); openAIChat()">
+                    शुरू करें / Get Started
+                </button>
+
+            </div>
+
+            <!-- Business Loan Card -->
+            <div class="feature-card" onclick="openFeature('Business Loan Advisory')">
+
+                <div class="feature-image loan-image"></div>
+
+                <h3>व्यवसाय लोन सहायता / Business Loan Advisory</h3>
+
+                <p>
+                    पैसों, बजट, कमाई और खर्च की योजना बनाएं
+                </p>
+
+                <button type="button">
+                    योजना बनाएं / Create a Plan
+                </button>
+
+            </div>
+
+            <!-- Government Schemes Card -->
+            <div class="feature-card" onclick="openFeature('Government Schemes')">
+
+                <div class="feature-image scheme-image"></div>
+
+                <h3>सरकारी योजनाएं / Government Schemes</h3>
+
+                <p>
+                    अपने व्यवसाय को आगे बढ़ाने के लिए सरकार की मदद
+                    और उपयोगी योजनाओं के बारे में जानें।
+                </p>
+
+                <button type="button">
+                    योजना देखें / View Schemes
+                </button>
+
+            </div>
+
+            <!-- Local Market Card -->
+            <div class="feature-card" onclick="openFeature('Local Market')">
+
+                <div class="feature-image market-image"></div>
+
+                <h3>स्थानीय बाजार / Local Market</h3>
+
+                <p>
+                    अपने आसपास के बाजार और ग्राहकों की जरूरतों को समझें
+                </p>
+
+                <button type="button">
+                    बाजार देखें / View Market
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI Chatbox -->
+        <section id="aiChatBox" class="ai-chat-box" style="display: none;">
+
+            <div class="ai-chat-header">
+
+                <div>
+                    <h2>🤖 AI Business Advisor</h2>
+                    <p>अपने बिज़नेस से जुड़ा सवाल पूछें</p>
+                </div>
+
+                <button type="button" onclick="closeAIChat()" class="close-chat-btn">
+                    ✖
+                </button>
+
+            </div>
+
+            <!-- Business Category -->
+            <div class="business-category-box">
+
+                <label for="businessCategory">
+                    सबसे पहले अपना बिज़नेस चुनें: / Choose Your Business:
+                </label>
+
+                <select id="businessCategory">
+                    <option value="">
+                        अपना बिज़नेस चुनें / Choose Your Business
+                    </option>
+
+                    <option value="किराना दुकान">
+                        किराना दुकान / Grocery Store
+                    </option>
+
+                    <option value="चाय और नाश्ता">
+                        चाय और नाश्ता / Tea & Snacks
+                    </option>
+
+                    <option value="डेयरी बिज़नेस">
+                        डेयरी बिज़नेस / Dairy Business
+                    </option>
+
+                    <option value="सिलाई सेंटर">
+                        सिलाई सेंटर / Tailoring Center
+                    </option>
+
+                    <option value="मोबाइल रिपेयर">
+                        मोबाइल रिपेयर / Mobile Repair
+                    </option>
+
+                    <option value="खेती से जुड़ा बिज़नेस">
+                        खेती से जुड़ा बिज़नेस / Agriculture Business
+                    </option>
+
+                    <option value="मुर्गी पालन">
+                        मुर्गी पालन / Poultry Farming
+                    </option>
+
+                    <option value="बकरी पालन">
+                        बकरी पालन / Goat Farming
+                    </option>
+
+                    <option value="अन्य बिज़नेस">
+                        अन्य बिज़नेस / Other Business
+                    </option>
+                </select>
+
+            </div>
+            <!-- Budget Selection -->
+            <div class="budget-category-box">
+
+                <label for="businessBudget">
+                    आपका कुल बजट कितना है? / total budget?
+                </label>
+
+                <select id="businessBudget">
+
+                    <option value="">
+                        अपना बजट चुनें / Choose Your Budget
+                    </option>
+
+                    <option value="10000">
+                        ₹10,000 तक
+                    </option>
+
+                    <option value="25000">
+                        ₹25,000 तक
+                    </option>
+
+                    <option value="50000">
+                        ₹50,000 तक
+                    </option>
+
+                    <option value="100000">
+                        ₹1,00,000 तक
+                    </option>
+
+                    <option value="200000">
+                        ₹2,00,000 तक
+                    </option>
+
+                    <option value="500000">
+                        ₹5,00,000 तक
+                    </option>
+
+                </select>
+
+                <p class="budget-note">
+                    यह अनुमानित बजट है। वास्तविक खर्च आपके स्थान और बिज़नेस के अनुसार बदल सकता है।
+                </p>
+
+            </div>
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="bot-message">
+                    नमस्ते! 🙏 मैं विकास हूँ , आपका Business Advisor ,
+                    पहले अपना बिज़नेस चुनें और फिर अपना सवाल पूछें।
+                </div>
+
+            </div>
+
+            <div class="quick-questions">
+
+                <button type="button" onclick="askQuickQuestion('इस बिज़नेस में ग्राहक कैसे बढ़ाएं?')">
+                    ग्राहक कैसे बढ़ाएं?
+                </button>
+
+                <button type="button" onclick="askQuickQuestion('इस बिज़नेस में मुनाफा कैसे बढ़ाएं?')">
+                    मुनाफा कैसे बढ़ाएं?
+                </button>
+
+                <button type="button" onclick="askQuickQuestion('इस बिज़नेस के लिए लोन कैसे मिलेगा?')">
+                    लोन की जानकारी
+                </button>
+
+            </div>
+
+            <div class="chat-input-area">
+
+                <input type="text" id="userQuestion" placeholder="अपना सवाल यहाँ लिखें..."
+                    onkeydown="if(event.key === 'Enter') sendAIMessage()">
+
+                <button type="button" onclick="sendAIMessage()">
+                    भेजें / Send
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Other Feature Result -->
+        <section id="featureResult" class="result-card hidden">
+
+            <h2 id="featureTitle"></h2>
+
+            <div id="featureText"></div>
+
+            <button type="button" onclick="goBack()">
+                Back to Dashboard
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Udyam Yukti | Rural Entrepreneurs ke liye
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

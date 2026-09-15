@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udyam Yukti - Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="login-page">
+        <div class="login-card">
+
+            <div class="logo-icon">
+                <img src="logo.png" alt="Udyam Yukti Logo">
+            </div>
+            <h2>Welcome Back!</h2>
+            <h3>आपका स्वागत है!</h3>
+            <p class="login-text">Login karke apne business ko grow karein.</p>
+            <p class="tagline">आपका व्यवसाय, हमारी सलाह 🌱</p>
+            <form onsubmit="loginUser(event)">
+                <label for="mobile">मोबाइल नंबर / Mobile Number</label>
+                <input type="tel" id="mobile" placeholder="Enter mobile number" maxlength="10" required />
+
+                <label for="password">पासवर्ड / Password</label>
+                <input type="password" id="password" placeholder="Enter password" required />
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p id="loginMessage"></p>
+
+            <p class="signup-text">
+                New user? <a href="#" onclick="showSignup()">खाता बनाएं</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
