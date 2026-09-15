@@ -1252,3 +1252,98 @@ function getBusinessAdvice(question) {
         आप ग्राहक, बिक्री, बजट, लोन या मुनाफे से जुड़ा सवाल पूछ सकते हैं।
     `;
 }
+// State-wise District Dropdown
+
+const stateSelect = document.getElementById("state");
+const districtSelect = document.getElementById("district");
+
+const districtsByState = {
+    "Bihar": [
+        "अररिया / Araria",
+        "अरवल / Arwal",
+        "औरंगाबाद / Aurangabad",
+        "बांका / Banka",
+        "बेगूसराय / Begusarai",
+        "भागलपुर / Bhagalpur",
+        "भोजपुर / Bhojpur",
+        "बक्सर / Buxar",
+        "दरभंगा / Darbhanga",
+        "पूर्वी चंपारण / East Champaran",
+        "गया / Gaya",
+        "गोपालगंज / Gopalganj",
+        "जमुई / Jamui",
+        "जहानाबाद / Jehanabad",
+        "कैमूर / भभुआ / Kaimur",
+        "कटिहार / Katihar",
+        "खगड़िया / Khagaria",
+        "किशनगंज / Kishanganj",
+        "लखीसराय / Lakhisarai",
+        "मधेपुरा / Madhepura",
+        "मधुबनी / Madhubani",
+        "मुंगेर / Munger",
+        "मुजफ्फरपुर / Muzaffarpur",
+        "नालंदा / Nalanda",
+        "नवादा / Nawada",
+        "पटना / Patna",
+        "पूर्णिया / Purnia",
+        "रोहतास / Rohtas",
+        "सहरसा / Saharsa",
+        "समस्तीपुर / Samastipur",
+        "सारण / Saran",
+        "शेखपुरा / Sheikhpura",
+        "शिवहर / Sheohar",
+        "सीतामढ़ी / Sitamarhi",
+        "सीवान / Siwan",
+        "सुपौल / Supaul",
+        "वैशाली / Vaishali",
+        "पश्चिम चंपारण / West Champaran"
+    ]
+};
+
+if (stateSelect && districtSelect) {
+
+    stateSelect.addEventListener("change", function () {
+
+        const selectedState = stateSelect.value;
+
+        districtSelect.innerHTML = "";
+
+        if (selectedState === "Bihar") {
+
+            districtSelect.disabled = false;
+
+            const defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.textContent = "अपना जिला चुनें / Select District";
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+
+            districtSelect.appendChild(defaultOption);
+
+            districtsByState["Bihar"].forEach(function (district) {
+
+                const option = document.createElement("option");
+
+                option.value = district;
+                option.textContent = district;
+
+                districtSelect.appendChild(option);
+
+            });
+
+        } else {
+
+            districtSelect.disabled = true;
+
+            const option = document.createElement("option");
+
+            option.value = "";
+            option.textContent = "पहले बिहार चुनें / Select Bihar First";
+
+            districtSelect.appendChild(option);
+
+        }
+
+    });
+
+}
