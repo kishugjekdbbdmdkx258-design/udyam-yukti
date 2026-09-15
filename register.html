@@ -2,12 +2,12 @@
 <html lang="hi">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Udyam Yukti - Create Account</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,23 +21,17 @@
                 <img src="logo.png" alt="Udyam Yukti Logo">
             </div>
 
-            <!-- Subtitle -->
             <p class="subtitle">
                 ग्रामीण उद्यमियों का स्मार्ट साथी
             </p>
 
-            <!-- Heading -->
-            <h2>
-                खाता बनाएं / Create Account
-            </h2>
+            <h2>खाता बनाएं / Create Account</h2>
 
             <p class="login-text">
                 अपनी जानकारी भरें ताकि हम आपके लिए सही सलाह दे सकें।
             </p>
 
-
-            <!-- Registration Form -->
-            <form onsubmit="registerUser(event)">
+            <form id="registerForm">
 
                 <!-- Full Name -->
                 <label for="fullName">
@@ -47,10 +41,9 @@
                 <input
                     type="text"
                     id="fullName"
-                    placeholder="अपना नाम लिखें / Enter your name"
+                    placeholder="अपना नाम लिखें"
                     required
-                />
-
+                >
 
                 <!-- Age -->
                 <label for="age">
@@ -60,12 +53,11 @@
                 <input
                     type="number"
                     id="age"
-                    placeholder="अपनी उम्र लिखें / Enter your age"
+                    placeholder="अपनी उम्र लिखें"
                     min="18"
                     max="100"
                     required
-                />
-
+                >
 
                 <!-- State -->
                 <label for="state">
@@ -78,28 +70,32 @@
                         अपना राज्य चुनें / Select State
                     </option>
 
-                    <option value="Andhra Pradesh">
-                        आंध्र प्रदेश / Andhra Pradesh
-                    </option>
-
-                    <option value="Arunachal Pradesh">
-                        अरुणाचल प्रदेश / Arunachal Pradesh
-                    </option>
-
-                    <option value="Assam">
-                        असम / Assam
-                    </option>
-
                     <option value="Bihar">
                         बिहार / Bihar
                     </option>
 
-                    <option value="Chhattisgarh">
-                        छत्तीसगढ़ / Chhattisgarh
+                    <option value="Uttar Pradesh">
+                        उत्तर प्रदेश / Uttar Pradesh
                     </option>
 
-                    <option value="Goa">
-                        गोवा / Goa
+                    <option value="Jharkhand">
+                        झारखंड / Jharkhand
+                    </option>
+
+                    <option value="West Bengal">
+                        पश्चिम बंगाल / West Bengal
+                    </option>
+
+                    <option value="Madhya Pradesh">
+                        मध्य प्रदेश / Madhya Pradesh
+                    </option>
+
+                    <option value="Rajasthan">
+                        राजस्थान / Rajasthan
+                    </option>
+
+                    <option value="Maharashtra">
+                        महाराष्ट्र / Maharashtra
                     </option>
 
                     <option value="Gujarat">
@@ -110,88 +106,23 @@
                         हरियाणा / Haryana
                     </option>
 
-                    <option value="Himachal Pradesh">
-                        हिमाचल प्रदेश / Himachal Pradesh
-                    </option>
-
-                    <option value="Jharkhand">
-                        झारखंड / Jharkhand
-                    </option>
-
-                    <option value="Karnataka">
-                        कर्नाटक / Karnataka
-                    </option>
-
-                    <option value="Kerala">
-                        केरल / Kerala
-                    </option>
-
-                    <option value="Madhya Pradesh">
-                        मध्य प्रदेश / Madhya Pradesh
-                    </option>
-
-                    <option value="Maharashtra">
-                        महाराष्ट्र / Maharashtra
-                    </option>
-
-                    <option value="Manipur">
-                        मणिपुर / Manipur
-                    </option>
-
-                    <option value="Meghalaya">
-                        मेघालय / Meghalaya
-                    </option>
-
-                    <option value="Mizoram">
-                        मिजोरम / Mizoram
-                    </option>
-
-                    <option value="Nagaland">
-                        नागालैंड / Nagaland
+                    <option value="Punjab">
+                        पंजाब / Punjab
                     </option>
 
                     <option value="Odisha">
                         ओडिशा / Odisha
                     </option>
 
-                    <option value="Punjab">
-                        पंजाब / Punjab
+                    <option value="Chhattisgarh">
+                        छत्तीसगढ़ / Chhattisgarh
                     </option>
 
-                    <option value="Rajasthan">
-                        राजस्थान / Rajasthan
-                    </option>
-
-                    <option value="Sikkim">
-                        सिक्किम / Sikkim
-                    </option>
-
-                    <option value="Tamil Nadu">
-                        तमिलनाडु / Tamil Nadu
-                    </option>
-
-                    <option value="Telangana">
-                        तेलंगाना / Telangana
-                    </option>
-
-                    <option value="Tripura">
-                        त्रिपुरा / Tripura
-                    </option>
-
-                    <option value="Uttar Pradesh">
-                        उत्तर प्रदेश / Uttar Pradesh
-                    </option>
-
-                    <option value="Uttarakhand">
-                        उत्तराखंड / Uttarakhand
-                    </option>
-
-                    <option value="West Bengal">
-                        पश्चिम बंगाल / West Bengal
+                    <option value="Other">
+                        अन्य राज्य / Other State
                     </option>
 
                 </select>
-
 
                 <!-- District -->
                 <label for="district">
@@ -206,10 +137,9 @@
 
                 </select>
 
-
-                <!-- Village / City -->
+                <!-- Village -->
                 <label for="village">
-                    गाँव / शहर / Village / City
+                    गाँव / शहर / Village or City
                 </label>
 
                 <input
@@ -217,12 +147,11 @@
                     id="village"
                     placeholder="अपने गाँव या शहर का नाम"
                     required
-                />
-
+                >
 
                 <!-- Business -->
                 <label for="business">
-                    आप कौन-सा व्यवसाय करते हैं / या करना चाहते हैं?
+                    आप कौन-सा व्यवसाय करते हैं या करना चाहते हैं?
                 </label>
 
                 <select id="business" required>
@@ -231,46 +160,46 @@
                         व्यवसाय चुनें / Select Business
                     </option>
 
-                    <option value="किराना दुकान / Grocery Shop">
+                    <option value="Grocery Shop">
                         किराना दुकान / Grocery Shop
                     </option>
 
-                    <option value="सिलाई / Tailoring">
+                    <option value="Tailoring">
                         सिलाई / Tailoring
                     </option>
 
-                    <option value="खाने-पीने का व्यवसाय / Food Business">
+                    <option value="Food Business">
                         खाने-पीने का व्यवसाय / Food Business
                     </option>
 
-                    <option value="कृषि / Agriculture">
+                    <option value="Agriculture">
                         कृषि / Agriculture
                     </option>
 
-                    <option value="हस्तशिल्प / Handicraft">
+                    <option value="Handicraft">
                         हस्तशिल्प / Handicraft
                     </option>
 
-                    <option value="मोबाइल रिपेयर / Mobile Repair">
-                        मोबाइल रिपेयर / Mobile Repair
+                    <option value="Mobile Repairing">
+                        मोबाइल रिपेयर / Mobile Repairing
                     </option>
 
-                    <option value="पशुपालन / Dairy">
+                    <option value="Dairy">
                         पशुपालन / Dairy
                     </option>
 
-                    <option value="अभी व्यवसाय शुरू नहीं किया / Not Started">
-                        अभी व्यवसाय शुरू नहीं किया / Haven't Started
+                    <option value="Not Started">
+                        अभी व्यवसाय शुरू नहीं किया /
+                        Haven't Started Yet
                     </option>
 
-                    <option value="अन्य / Other">
+                    <option value="Other">
                         अन्य / Other
                     </option>
 
                 </select>
 
-
-                <!-- Mobile Number -->
+                <!-- Mobile -->
                 <label for="registerMobile">
                     मोबाइल नंबर / Mobile Number
                 </label>
@@ -282,8 +211,7 @@
                     maxlength="10"
                     pattern="[0-9]{10}"
                     required
-                />
-
+                >
 
                 <!-- Password -->
                 <label for="registerPassword">
@@ -296,30 +224,22 @@
                     placeholder="कम से कम 4 अक्षर"
                     minlength="4"
                     required
-                />
+                >
 
-
-                <!-- Submit Button -->
+                <!-- Submit -->
                 <button type="submit">
                     खाता बनाएं / Create Account
                 </button>
 
             </form>
 
-
-            <!-- Registration Message -->
             <p id="registerMessage"></p>
 
-
-            <!-- Login Link -->
             <p class="signup-text">
-
                 पहले से खाता है?
-
                 <a href="index.html">
                     लॉगिन करें / Login
                 </a>
-
             </p>
 
         </div>
@@ -327,8 +247,217 @@
     </div>
 
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+
+        // Bihar District List
+        const districtsByState = {
+
+            "Bihar": [
+
+                "अररिया / Araria",
+                "अरवल / Arwal",
+                "औरंगाबाद / Aurangabad",
+                "बांका / Banka",
+                "बेगूसराय / Begusarai",
+                "भागलपुर / Bhagalpur",
+                "भोजपुर / Bhojpur",
+                "बक्सर / Buxar",
+                "दरभंगा / Darbhanga",
+                "पूर्वी चंपारण / East Champaran",
+                "गया / Gaya",
+                "गोपालगंज / Gopalganj",
+                "जमुई / Jamui",
+                "जहानाबाद / Jehanabad",
+                "कैमूर / Kaimur",
+                "कटिहार / Katihar",
+                "खगड़िया / Khagaria",
+                "किशनगंज / Kishanganj",
+                "लखीसराय / Lakhisarai",
+                "मधेपुरा / Madhepura",
+                "मधुबनी / Madhubani",
+                "मुंगेर / Munger",
+                "मुजफ्फरपुर / Muzaffarpur",
+                "नालंदा / Nalanda",
+                "नवादा / Nawada",
+                "पटना / Patna",
+                "पूर्णिया / Purnia",
+                "रोहतास / Rohtas",
+                "सहरसा / Saharsa",
+                "समस्तीपुर / Samastipur",
+                "सारण / Saran",
+                "शेखपुरा / Sheikhpura",
+                "शिवहर / Sheohar",
+                "सीतामढ़ी / Sitamarhi",
+                "सीवान / Siwan",
+                "सुपौल / Supaul",
+                "वैशाली / Vaishali",
+                "पश्चिम चंपारण / West Champaran"
+
+            ]
+
+        };
+
+
+        // Get HTML Elements
+        const stateDropdown = document.getElementById("state");
+        const districtDropdown = document.getElementById("district");
+
+
+        // State Change Event
+        stateDropdown.addEventListener("change", function () {
+
+            const selectedState = stateDropdown.value;
+
+            // Clear old districts
+            districtDropdown.innerHTML = "";
+
+            // If Bihar is selected
+            if (selectedState === "Bihar") {
+
+                districtDropdown.disabled = false;
+
+                const defaultOption = document.createElement("option");
+
+                defaultOption.value = "";
+                defaultOption.textContent =
+                    "अपना जिला चुनें / Select District";
+
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+
+                districtDropdown.appendChild(defaultOption);
+
+
+                // Add Bihar districts
+                districtsByState["Bihar"].forEach(function (district) {
+
+                    const option = document.createElement("option");
+
+                    option.value = district;
+                    option.textContent = district;
+
+                    districtDropdown.appendChild(option);
+
+                });
+
+            } else {
+
+                // For other states
+                districtDropdown.disabled = true;
+
+                const option = document.createElement("option");
+
+                option.value = "";
+                option.textContent =
+                    "इस राज्य की district list जल्द आएगी / Coming Soon";
+
+                districtDropdown.appendChild(option);
+
+            }
+
+        });
+
+
+        // Registration Form
+        const registerForm = document.getElementById("registerForm");
+
+        registerForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const fullName =
+                document.getElementById("fullName").value.trim();
+
+            const age =
+                document.getElementById("age").value;
+
+            const state =
+                document.getElementById("state").value;
+
+            const district =
+                document.getElementById("district").value;
+
+            const village =
+                document.getElementById("village").value.trim();
+
+            const business =
+                document.getElementById("business").value;
+
+            const mobile =
+                document.getElementById("registerMobile").value.trim();
+
+            const password =
+                document.getElementById("registerPassword").value;
+
+            const message =
+                document.getElementById("registerMessage");
+
+
+            // Mobile validation
+            if (!/^[0-9]{10}$/.test(mobile)) {
+
+                message.style.color = "red";
+
+                message.textContent =
+                    "कृपया सही 10 अंकों का मोबाइल नंबर डालें।";
+
+                return;
+
+            }
+
+
+            // District validation
+            if (state === "Bihar" && district === "") {
+
+                message.style.color = "red";
+
+                message.textContent =
+                    "कृपया अपना जिला चुनें।";
+
+                return;
+
+            }
+
+
+            // User Object
+            const userData = {
+
+                fullName: fullName,
+                age: age,
+                state: state,
+                district: district,
+                village: village,
+                business: business,
+                mobile: mobile,
+                password: password
+
+            };
+
+
+            // Save user data
+            localStorage.setItem(
+                "udyamUser",
+                JSON.stringify(userData)
+            );
+
+
+            // Success message
+            message.style.color = "green";
+
+            message.textContent =
+                "आपका खाता सफलतापूर्वक बन गया है।";
+
+
+            // Redirect to login
+            setTimeout(function () {
+
+                window.location.href = "index.html";
+
+            }, 1500);
+
+        });
+
+    </script>
 
 </body>
 
